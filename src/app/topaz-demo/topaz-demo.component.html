@@ -1,0 +1,97 @@
+<div>
+
+    <table border="1" cellpadding="0"  width="500">
+
+        <tr>
+            <td height="100" width="500">
+                <canvas id="cnv" name="cnv" width="500" height="100"></canvas>
+            </td>
+        </tr>
+
+    </table>
+
+    <br>
+
+    <canvas #sigImg width="500" height="100"></canvas>
+
+
+
+
+        <div>
+            <!--<input id="SignBtn" name="SignBtn" type="button" value="Sign"  onclick="onSign()"/>&nbsp;&nbsp;&nbsp;&nbsp;-->
+
+            <!--<input id="button1" name="ClearBtn" type="button" value="Clear" onclick="onClear()"/>&nbsp;&nbsp;&nbsp;&nbsp-->
+
+            <!--<input id="button2" name="DoneBtn" type="button" value="Done" onclick="onDone()"/>&nbsp;&nbsp;&nbsp;&nbsp-->
+            <button mat-raised-button (click)="onSign()">Sign</button>
+
+            <button mat-raised-button (click)="onClear()">Clear</button>
+
+            <button mat-raised-button (click)="onDone()">Done</button>
+
+
+
+            <br>
+
+            <br>
+
+            <ng-container [formGroup]="formGroup">
+            <!--<input type="hidden" name="bioSigData">-->
+
+                <mat-form-field>
+
+                    <mat-label>bioSigData</mat-label>
+
+                    <textarea matInput formControlName="bioSigData" placeholder="bioSigData:"></textarea>
+
+                </mat-form-field>
+
+                <!--<input type="hidden" name="sigImgData">-->
+
+                <mat-form-field>
+
+                    <mat-label>sigImgData</mat-label>
+
+                    <textarea matInput formControlName="sigImgData" placeholder="sigImgData:"></textarea>
+
+                </mat-form-field>
+
+                <br>
+
+                <br>
+
+                <mat-form-field>
+
+                    <mat-label>SigString</mat-label>
+
+                    <textarea matInput formControlName="sigStringData" placeholder="SigString:"></textarea>
+
+                </mat-form-field>
+
+                <mat-form-field>
+
+                    <mat-label>Base64 String</mat-label>
+
+                    <textarea matInput formControlName="sigImageData" placeholder="Base64 String:"></textarea>
+
+                </mat-form-field>
+            </ng-container>
+        </div>
+
+
+
+
+    <br>
+    <br>
+
+    <!--index.js is required for SigWeb to function-->
+    <!--index.js is located here and may be copied for your own use-->
+    <!--http://www.sigplusweb.com/SigWebTablet.js-->
+    <!--<script type="text/javascript" src="../index.js"></script>-->
+
+    <!--<script type="text/javascript" src="https-demo.js"></script>-->
+
+
+
+
+</div>
